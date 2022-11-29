@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.echoes.common.result.Result;
 import com.echoes.sysUtils.exception.EchoesException;
+import com.echoes.system.entity.AssginRoleVo;
 import com.echoes.system.entity.SysRole;
 import com.echoes.system.entity.SysRoleQueryVo;
 import com.echoes.system.service.SysRoleService;
@@ -16,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -33,6 +35,19 @@ public class SysRoleController {
     @Autowired
     private SysRoleService sysRoleService;
 
+    @ApiOperation("获取用户的角色数据")
+    @GetMapping("toAssign/{userId}")
+    public Result toAssign(@PathVariable String userId) {
+        Map<String,Object> roleMap = sysRoleService.getRolesByUserId(userId);
+        return Result.ok(roleMap);
+    }
+
+    @ApiOperation("用户分配角色")
+    @PostMapping("doAssign")
+    public Result doAssign(@RequestBody AssginRoleVo assginRoleVo) {
+        sysRoleService.doAssign(assginRoleVo);
+        return Result.ok();
+    }
 
     //7 批量删除
     // 多个id值 [1,2,3]
