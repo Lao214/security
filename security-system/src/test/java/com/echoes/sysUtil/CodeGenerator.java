@@ -1,4 +1,4 @@
-package com.echoes.system;
+package com.echoes.sysUtil;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;

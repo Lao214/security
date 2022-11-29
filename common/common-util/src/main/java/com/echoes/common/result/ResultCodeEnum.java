@@ -1,4 +1,4 @@
-package com.echoes.commonUtil.result;
+package com.echoes.common.result;
 
 import lombok.Getter;
 

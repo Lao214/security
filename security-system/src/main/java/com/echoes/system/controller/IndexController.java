@@ -1,9 +1,7 @@
 package com.echoes.system.controller;
 
-import com.echoes.commonUtil.result.Result;
-import com.echoes.su.exception.EchoesException;
+import com.echoes.common.result.Result;
 import com.echoes.system.entity.LoginVo;
-import com.echoes.system.entity.SysUser;
 import com.echoes.system.service.SysUserService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;

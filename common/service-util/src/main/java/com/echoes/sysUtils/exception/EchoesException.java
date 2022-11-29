@@ -1,4 +1,4 @@
-package com.echoes.su.exception;
+package com.echoes.sysUtils.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

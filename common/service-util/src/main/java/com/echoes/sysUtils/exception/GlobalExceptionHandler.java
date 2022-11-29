@@ -1,8 +1,8 @@
-package com.echoes.su.exception;
+package com.echoes.sysUtils.exception;
 
 
-import com.echoes.commonUtil.result.Result;
-import com.echoes.commonUtil.result.ResultCodeEnum;
+import com.echoes.common.result.Result;
+import com.echoes.common.result.ResultCodeEnum;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

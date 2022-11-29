@@ -1,4 +1,4 @@
-package com.echoes.su.config;
+package com.echoes.system.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

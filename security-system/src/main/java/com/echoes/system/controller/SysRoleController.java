@@ -5,8 +5,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.echoes.commonUtil.result.Result;
-import com.echoes.su.exception.EchoesException;
+import com.echoes.common.result.Result;
+import com.echoes.sysUtils.exception.EchoesException;
 import com.echoes.system.entity.SysRole;
 import com.echoes.system.entity.SysRoleQueryVo;
 import com.echoes.system.service.SysRoleService;
@@ -15,7 +15,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -95,13 +94,7 @@ public class SysRoleController {
         //创建page对象
         Page<SysRole> pageParam = new Page<>(page,limit);
         //调用service方法
-        QueryWrapper<SysRole> sysRoleQueryWrapper = new QueryWrapper<>();
-        if(StringUtils.isNotBlank(sysRoleQueryVo.getRoleName())){
-            sysRoleQueryWrapper.like("role_name",sysRoleQueryVo.getRoleName());
-        }
-        int count = sysRoleService.count(sysRoleQueryWrapper);
         IPage<SysRole> pageModel = sysRoleService.selectPage(pageParam,sysRoleQueryVo);
-        pageModel.setTotal(count);
         //返回
         return Result.ok(pageModel);
     }
