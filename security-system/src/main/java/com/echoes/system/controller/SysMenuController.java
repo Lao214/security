@@ -2,6 +2,7 @@ package com.echoes.system.controller;
 
 
 import com.echoes.common.result.Result;
+import com.echoes.system.entity.AssginMenuVo;
 import com.echoes.system.entity.SysMenu;
 import com.echoes.system.service.SysMenuService;
 import io.swagger.annotations.ApiOperation;
@@ -24,6 +25,22 @@ public class SysMenuController {
 
     @Autowired
     private SysMenuService sysMenuService;
+
+
+    @ApiOperation("给角色分配菜单权限")
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestBody AssginMenuVo assginMenuVo) {
+        sysMenuService.doAssign(assginMenuVo);
+        return Result.ok();
+    }
+
+    //根据角色分配菜单
+    @ApiOperation("根据角色获取菜单")
+    @GetMapping("/toAssign/{roleId}")
+    public Result toAssign(@PathVariable Long roleId) {
+        List<SysMenu> list = sysMenuService.findMenuByRoleId(roleId);
+        return Result.ok(list);
+    }
 
     //菜单列表（树形）
     @ApiOperation("菜单列表")
