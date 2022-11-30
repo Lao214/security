@@ -52,6 +52,7 @@ public class SysUserController {
     public Result save(@RequestBody SysUser user) {
         //把输入密码进行加密 MD5
         String encrypt = MD5.encrypt(user.getPassword());
+        user.setStatus(1);
         user.setPassword(encrypt);
         boolean is_Success = sysUserService.save(user);
         if(is_Success) {

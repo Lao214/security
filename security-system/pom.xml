@@ -12,12 +12,16 @@
     <artifactId>service-system</artifactId>
 
     <dependencies>
+        <!-- Spring Security依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.echoes</groupId>-->
-<!--            <artifactId>spring-security</artifactId>-->
-<!--            <version>1.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.echoes</groupId>

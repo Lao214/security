@@ -12,7 +12,6 @@
     <artifactId>service-util</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>com.echoes</groupId>
             <artifactId>common-util</artifactId>

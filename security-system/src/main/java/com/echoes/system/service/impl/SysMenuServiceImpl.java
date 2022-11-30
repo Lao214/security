@@ -1,7 +1,7 @@
 package com.echoes.system.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.echoes.sysUtils.exception.EchoesException;
+import com.echoes.system.exception.EchoesException;
 import com.echoes.system.entity.AssginMenuVo;
 import com.echoes.system.entity.RouterVo;
 import com.echoes.system.entity.SysMenu;

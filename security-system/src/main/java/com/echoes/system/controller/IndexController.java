@@ -3,7 +3,7 @@ package com.echoes.system.controller;
 import com.echoes.common.result.Result;
 import com.echoes.common.utils.JwtHelper;
 import com.echoes.common.utils.MD5;
-import com.echoes.sysUtils.exception.EchoesException;
+import com.echoes.system.exception.EchoesException;
 import com.echoes.system.entity.LoginVo;
 import com.echoes.system.entity.SysUser;
 import com.echoes.system.service.SysUserService;

@@ -9,12 +9,11 @@
 	<packaging>pom</packaging>
 	<version>1.0</version>
 	<modules>
-		<module>model</module>
 		<module>common</module>
 		<module>security-system</module>
 		<module>common/common-util</module>
 		<module>common/service-util</module>
-	</modules>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
